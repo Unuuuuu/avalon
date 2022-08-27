@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+@layer base {
+  label {
+    @apply block;
+
+    &:not(:last-of-type) {
+      @apply mb-2;
+    }
+
+    span {
+      @apply text-gray-300;
+    }
+
+    input {
+      @apply mt-1;
+    }
+
+    div[role="alert"] {
+      @apply mt-1 text-red-500 text-xs;
+    }
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    @apply border border-neutral-700 rounded-sm focus:border-neutral-500 focus:ring focus:ring-neutral-700 flex items-center justify-center w-full p-2 bg-black;
+  }
+
+  button,
+  button[type="button"],
+  button[type="submit"] {
+    @apply border border-neutral-700 rounded-sm focus:border-neutral-500 focus:ring focus:ring-neutral-700 flex items-center justify-center w-full p-2 outline-none;
+  }
+}
+
+@layer components {
+  .common {
+    @apply border border-neutral-700 rounded-sm focus:border-neutral-500 focus:ring focus:ring-neutral-700 flex items-center justify-center w-full p-2;
+  }
+
+  button.primary {
+    @apply bg-neutral-800;
+  }
+
+  button.profile {
+    @apply pl-1.5 pr-2.5 py-1.5;
+  }
+}

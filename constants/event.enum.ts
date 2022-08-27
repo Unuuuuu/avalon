@@ -1,0 +1,12 @@
+export enum EVENT {
+  // client
+  GET_ROOMS = "GET_ROOMS",
+  CREATE_ROOM = "CREATE_ROOM",
+  JOIN_ROOM = "JOIN_ROOM",
+  GET_ROOM_INFO = "GET_ROOM_INFO",
+
+  // server
+  ROOMS = "ROOMS",
+  ROOM_ID = "ROOM_ID",
+  ROOM_UPDATE = "ROOM_UPDATE",
+}
