@@ -27,7 +27,7 @@ const Room = () => {
     <>
       <p>Room: {pid}</p>
       {members.map((member, idx) => (
-        <p key={idx}>{member.nickname}</p>
+        <p key={idx}>{(member as any).nickname}</p> // TODO: replace any
       ))}
     </>
   );
