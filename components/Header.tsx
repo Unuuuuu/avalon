@@ -8,8 +8,8 @@ import { useRecoilValue } from "recoil";
 import { nicknameState } from "recoil/atoms";
 
 const Header = () => {
-  const [referenceElement, setReferenceElement] = useState();
-  const [popperElement, setPopperElement] = useState();
+  const [referenceElement, setReferenceElement] = useState<HTMLButtonElement | null>();
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>();
   const nickname = useRecoilValue(nicknameState);
   const router = useRouter();
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
